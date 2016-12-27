@@ -37,7 +37,7 @@ static const NSInteger EndTimeMinuteInterval = 30;
     self.endTimeTextField.date = [self.minimumSchedule.date dateByAddingTimeInterval:ScheduleHalfOfHourTimeInterval];
     self.endTimeTextField.minuteInterval = EndTimeMinuteInterval;
     self.endTimeTextField.minimumDate = [self.minimumSchedule.date dateByAddingTimeInterval:ScheduleHalfOfHourTimeInterval];
-    self.endTimeTextField.maximumDate = self.maximumSchedule.date;
+    self.endTimeTextField.maximumDate = [self.maximumSchedule.date dateByAddingTimeInterval:ScheduleHalfOfHourTimeInterval];
     self.startTimeLabel.text = [self.minimumSchedule.date dateStringWithFormat:NSStringStartTimeFormat.localized];
     self.detailTextView.delegate = self;
 
