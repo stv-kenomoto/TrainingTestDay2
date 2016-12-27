@@ -10,6 +10,7 @@
 #import "NSDate+Calendar.h"
 #import "NSString+Localizable.h"
 #import "ScheduleDetailViewController.h"
+#import "UIAlertController+Instance.h"
 
 static const NSInteger EndTimeMinuteInterval = 30;
 
@@ -62,6 +63,33 @@ static const NSInteger EndTimeMinuteInterval = 30;
     if (self.detailPlaceHolderLabel.isHidden) {
         [self.detailPlaceHolderLabel setHidden:NO];
     }
+}
+
+- (IBAction)saveButtonDidTouch:(UIBarButtonItem *)sender {
+    if (self.titleTextField.text.length == 0 && self.endTimeTextField.text.length == 0) {
+        UIAlertController *alertController = [UIAlertController alertControllerOfRequiredTitleAndEndTime];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
+
+    if (self.titleTextField.text.length == 0) {
+        UIAlertController *alertController = [UIAlertController alertControllerOfRequiredTitle];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
+
+    if (self.endTimeTextField.text.length == 0) {
+        UIAlertController *alertController = [UIAlertController alertControllerOfRequiredEndTime];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
+}
+
+- (IBAction)removeButtonTouch:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerOfDeleteScheduleWithHandler:^(UIAlertAction *action) {
+        NSLog(@"Remove");
+    }];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - UITextFieldDelegate

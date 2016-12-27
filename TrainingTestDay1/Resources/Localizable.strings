@@ -10,11 +10,23 @@
 
 "calendarTitleFormat" = "yyyy年MM月";
 
+"cancel" = "Cancel";
+
 "dayFormat" = "d";
+
+"deleteSchedule" = "この予定を削除しますか？";
 
 "done" = "完了";
 
-"endTimeFormat" = "〜yyyy/MM/dd HH:mm";
+"endTimeFormat" = "yyyy/MM/dd HH:mm";
+
+"ok" = "OK";
+
+"requiredEndTime" = "終了時間を入力してください";
+
+"requiredTitle" = "タイトルを入力してください";
+
+"requiredTitleAndEndTime" = "タイトル・終了時間を入力してください";
 
 "scheduleListTitleFormat" = "yyyy年MM月dd日 E曜日";
 

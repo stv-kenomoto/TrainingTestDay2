@@ -148,8 +148,16 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2JZ-Zg-amf">
                         <rightBarButtonItems>
-                            <barButtonItem title="保存" style="done" id="4Yp-kt-8RP"/>
-                            <barButtonItem systemItem="trash" id="pjB-O4-Jys"/>
+                            <barButtonItem title="保存" style="done" id="4Yp-kt-8RP">
+                                <connections>
+                                    <action selector="saveButtonDidTouch:" destination="i8U-Q2-xow" id="fgD-tJ-UEG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="pjB-O4-Jys">
+                                <connections>
+                                    <action selector="removeButtonTouch:" destination="i8U-Q2-xow" id="LEQ-NV-GXp"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

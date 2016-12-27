@@ -47,8 +47,13 @@
     [self resignFirstResponder];
 }
 
+- (void)setupText {
+    self.text = [self.date dateStringWithFormat:NSStringEndTimeFormat.localized];
+}
+
 - (void)datePickerValueChanged:(UIDatePicker *)sender {
-    self.text = [sender.date dateStringWithFormat:NSStringEndTimeFormat.localized];
+    self.date = sender.date;
+    [self setupText];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -69,6 +74,10 @@
 
     if (self.maximumDate != nil) {
         datePicker.maximumDate = self.maximumDate;
+    }
+
+    if (self.text.length == 0) {
+        [self setupText];
     }
 
     textField.inputView = datePicker;

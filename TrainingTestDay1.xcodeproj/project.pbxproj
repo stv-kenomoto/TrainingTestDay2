@@ -22,6 +22,7 @@
 		543106C01E0BB36600FE6723 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543106BF1E0BB36600FE6723 /* Localizable.strings */; };
 		543106C31E0BB41500FE6723 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106C21E0BB41500FE6723 /* NSString+Localizable.m */; };
 		54AD6EB61E11F573008FB5E2 /* DatePickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */; };
+		54AD6EBA1E120738008FB5E2 /* UIAlertController+Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6EB91E120738008FB5E2 /* UIAlertController+Instance.m */; };
 		54B51ED61E10B788006D92E1 /* UIStoryboard+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */; };
 		54B51EDB1E10B8F0006D92E1 /* ScheduleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */; };
 		54B51EE11E10BA0B006D92E1 /* ScheduleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE01E10BA0B006D92E1 /* ScheduleListViewController.m */; };
@@ -82,6 +83,8 @@
 		543106C21E0BB41500FE6723 /* NSString+Localizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localizable.m"; sourceTree = "<group>"; };
 		54AD6EB41E11F573008FB5E2 /* DatePickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerTextField.h; sourceTree = "<group>"; };
 		54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerTextField.m; sourceTree = "<group>"; };
+		54AD6EB81E120738008FB5E2 /* UIAlertController+Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Instance.h"; sourceTree = "<group>"; };
+		54AD6EB91E120738008FB5E2 /* UIAlertController+Instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Instance.m"; sourceTree = "<group>"; };
 		54B51ED41E10B788006D92E1 /* UIStoryboard+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+ViewController.h"; sourceTree = "<group>"; };
 		54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+ViewController.m"; sourceTree = "<group>"; };
 		54B51EDA1E10B8F0006D92E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScheduleList.storyboard; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				543106B01E0B5E1A00FE6723 /* NSDate+Calendar.m */,
 				543106C11E0BB41500FE6723 /* NSString+Localizable.h */,
 				543106C21E0BB41500FE6723 /* NSString+Localizable.m */,
+				54AD6EB81E120738008FB5E2 /* UIAlertController+Instance.h */,
+				54AD6EB91E120738008FB5E2 /* UIAlertController+Instance.m */,
 				54B51EE21E10BC82006D92E1 /* UINavigationController+Navigator.h */,
 				54B51EE31E10BC82006D92E1 /* UINavigationController+Navigator.m */,
 				54B51ED41E10B788006D92E1 /* UIStoryboard+ViewController.h */,
@@ -507,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				543106691E0A442B00FE6723 /* CalendarViewController.m in Sources */,
+				54AD6EBA1E120738008FB5E2 /* UIAlertController+Instance.m in Sources */,
 				543106661E0A442B00FE6723 /* AppDelegate.m in Sources */,
 				54AD6EB61E11F573008FB5E2 /* DatePickerTextField.m in Sources */,
 				54B51EEE1E10E709006D92E1 /* Schedule.m in Sources */,

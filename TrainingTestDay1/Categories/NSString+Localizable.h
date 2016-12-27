@@ -12,9 +12,15 @@
 
 UIKIT_EXTERN NSString *const NSStringBack;
 UIKIT_EXTERN NSString *const NSStringCalendarTitleFormat;
+UIKIT_EXTERN NSString *const NSStringCancel;
 UIKIT_EXTERN NSString *const NSStringDayFormat;
+UIKIT_EXTERN NSString *const NSStringDeleteSchedule;
 UIKIT_EXTERN NSString *const NSStringDone;
 UIKIT_EXTERN NSString *const NSStringEndTimeFormat;
+UIKIT_EXTERN NSString *const NSStringOk;
+UIKIT_EXTERN NSString *const NSStringRequiredEndTime;
+UIKIT_EXTERN NSString *const NSStringRequiredTitle;
+UIKIT_EXTERN NSString *const NSStringRequiredTitleAndEndTime;
 UIKIT_EXTERN NSString *const NSStringSchedule;
 UIKIT_EXTERN NSString *const NSStringScheduleListTitleFormat;
 UIKIT_EXTERN NSString *const NSStringScheduleTimeFormat;

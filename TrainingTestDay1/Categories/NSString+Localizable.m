@@ -10,9 +10,15 @@
 
 NSString *const NSStringBack = @"back";
 NSString *const NSStringCalendarTitleFormat = @"calendarTitleFormat";
+NSString *const NSStringCancel = @"cancel";
 NSString *const NSStringDayFormat = @"dayFormat";
+NSString *const NSStringDeleteSchedule = @"deleteSchedule";
 NSString *const NSStringDone = @"done";
 NSString *const NSStringEndTimeFormat = @"endTimeFormat";
+NSString *const NSStringOk = @"ok";
+NSString *const NSStringRequiredEndTime = @"requiredEndTime";
+NSString *const NSStringRequiredTitle = @"requiredTitle";
+NSString *const NSStringRequiredTitleAndEndTime = @"requiredTitleAndEndTime";
 NSString *const NSStringSchedule = @"schedule";
 NSString *const NSStringScheduleListTitleFormat = @"scheduleListTitleFormat";
 NSString *const NSStringScheduleTimeFormat = @"scheduleTimeFormat";
