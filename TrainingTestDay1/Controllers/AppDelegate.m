@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ScheduleDB.h"
 
 @interface AppDelegate ()
 
@@ -15,6 +16,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [ScheduleDB create];
     return YES;
 }
 

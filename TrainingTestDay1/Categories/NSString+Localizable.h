@@ -21,6 +21,7 @@ UIKIT_EXTERN NSString *const NSStringOk;
 UIKIT_EXTERN NSString *const NSStringRequiredEndTime;
 UIKIT_EXTERN NSString *const NSStringRequiredTitle;
 UIKIT_EXTERN NSString *const NSStringRequiredTitleAndEndTime;
+UIKIT_EXTERN NSString *const NSStringFailedSaving;
 UIKIT_EXTERN NSString *const NSStringSchedule;
 UIKIT_EXTERN NSString *const NSStringScheduleListTitleFormat;
 UIKIT_EXTERN NSString *const NSStringScheduleTimeFormat;

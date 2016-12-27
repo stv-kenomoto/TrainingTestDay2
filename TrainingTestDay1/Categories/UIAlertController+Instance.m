@@ -68,4 +68,17 @@
     return alert;
 }
 
++ (UIAlertController *)alertControllerOfFailedSaving {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
+                                                                   message:NSStringFailedSaving.localized
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:NSStringOk.localized
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * action) {}];
+
+    [alert addAction:okAction];
+    return alert;
+}
+
 @end

@@ -28,6 +28,8 @@
 
 "requiredTitleAndEndTime" = "タイトル・終了時間を入力してください";
 
+"failedSaving" = "保存に失敗しました";
+
 "scheduleListTitleFormat" = "yyyy年MM月dd日 E曜日";
 
 "schedule" = "予定";

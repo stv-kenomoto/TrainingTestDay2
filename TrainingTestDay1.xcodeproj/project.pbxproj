@@ -23,6 +23,9 @@
 		543106C31E0BB41500FE6723 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106C21E0BB41500FE6723 /* NSString+Localizable.m */; };
 		54AD6EB61E11F573008FB5E2 /* DatePickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */; };
 		54AD6EBA1E120738008FB5E2 /* UIAlertController+Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6EB91E120738008FB5E2 /* UIAlertController+Instance.m */; };
+		54AD6EC81E122775008FB5E2 /* ScheduleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AD6EC61E122775008FB5E2 /* ScheduleDetail.storyboard */; };
+		54AD6ECA1E1227EC008FB5E2 /* ScheduleDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6EC91E1227EC008FB5E2 /* ScheduleDB.m */; };
+		54AD6ECC1E122843008FB5E2 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6ECB1E122843008FB5E2 /* DatabaseManager.m */; };
 		54B51ED61E10B788006D92E1 /* UIStoryboard+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */; };
 		54B51EDB1E10B8F0006D92E1 /* ScheduleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */; };
 		54B51EE11E10BA0B006D92E1 /* ScheduleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE01E10BA0B006D92E1 /* ScheduleListViewController.m */; };
@@ -30,7 +33,6 @@
 		54B51EE71E10D8B3006D92E1 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE61E10D8B3006D92E1 /* ScheduleCell.m */; };
 		54B51EEA1E10DA8A006D92E1 /* ScheduleListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE91E10DA8A006D92E1 /* ScheduleListViewDataSource.m */; };
 		54B51EEE1E10E709006D92E1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EED1E10E709006D92E1 /* Schedule.m */; };
-		54B51EF01E10F1E9006D92E1 /* ScheduleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B51EEF1E10F1E9006D92E1 /* ScheduleDetail.storyboard */; };
 		54B51EF31E10F256006D92E1 /* ScheduleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EF21E10F256006D92E1 /* ScheduleDetailViewController.m */; };
 		54B51EF61E10F682006D92E1 /* UIViewController+BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EF51E10F682006D92E1 /* UIViewController+BackButton.m */; };
 		E9ACB159E960EAD1A488113F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1FD7E0202DDF78F730F91D /* libPods.a */; };
@@ -85,6 +87,11 @@
 		54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerTextField.m; sourceTree = "<group>"; };
 		54AD6EB81E120738008FB5E2 /* UIAlertController+Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Instance.h"; sourceTree = "<group>"; };
 		54AD6EB91E120738008FB5E2 /* UIAlertController+Instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Instance.m"; sourceTree = "<group>"; };
+		54AD6EBB1E120FA6008FB5E2 /* ScheduleDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDB.h; sourceTree = "<group>"; };
+		54AD6EC31E12163C008FB5E2 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		54AD6EC71E122775008FB5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScheduleDetail.storyboard; sourceTree = "<group>"; };
+		54AD6EC91E1227EC008FB5E2 /* ScheduleDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDB.m; sourceTree = "<group>"; };
+		54AD6ECB1E122843008FB5E2 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		54B51ED41E10B788006D92E1 /* UIStoryboard+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+ViewController.h"; sourceTree = "<group>"; };
 		54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+ViewController.m"; sourceTree = "<group>"; };
 		54B51EDA1E10B8F0006D92E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScheduleList.storyboard; sourceTree = "<group>"; };
@@ -98,7 +105,6 @@
 		54B51EE91E10DA8A006D92E1 /* ScheduleListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleListViewDataSource.m; sourceTree = "<group>"; };
 		54B51EEC1E10E709006D92E1 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
 		54B51EED1E10E709006D92E1 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
-		54B51EEF1E10F1E9006D92E1 /* ScheduleDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleDetail.storyboard; sourceTree = "<group>"; };
 		54B51EF11E10F256006D92E1 /* ScheduleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDetailViewController.h; sourceTree = "<group>"; };
 		54B51EF21E10F256006D92E1 /* ScheduleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDetailViewController.m; sourceTree = "<group>"; };
 		54B51EF41E10F682006D92E1 /* UIViewController+BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButton.h"; sourceTree = "<group>"; };
@@ -246,7 +252,7 @@
 			children = (
 				5431066A1E0A442B00FE6723 /* Calendar.storyboard */,
 				5431066F1E0A442B00FE6723 /* LaunchScreen.storyboard */,
-				54B51EEF1E10F1E9006D92E1 /* ScheduleDetail.storyboard */,
+				54AD6EC61E122775008FB5E2 /* ScheduleDetail.storyboard */,
 				54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */,
 			);
 			path = Storyboards;
@@ -307,8 +313,12 @@
 		54B51EEB1E10E6DB006D92E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				54AD6EC31E12163C008FB5E2 /* DatabaseManager.h */,
+				54AD6ECB1E122843008FB5E2 /* DatabaseManager.m */,
 				54B51EEC1E10E709006D92E1 /* Schedule.h */,
 				54B51EED1E10E709006D92E1 /* Schedule.m */,
+				54AD6EBB1E120FA6008FB5E2 /* ScheduleDB.h */,
+				54AD6EC91E1227EC008FB5E2 /* ScheduleDB.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,10 +445,10 @@
 			files = (
 				543106C01E0BB36600FE6723 /* Localizable.strings in Resources */,
 				543106711E0A442B00FE6723 /* LaunchScreen.storyboard in Resources */,
-				54B51EF01E10F1E9006D92E1 /* ScheduleDetail.storyboard in Resources */,
 				5431066E1E0A442B00FE6723 /* Assets.xcassets in Resources */,
 				5431066C1E0A442B00FE6723 /* Calendar.storyboard in Resources */,
 				54B51EDB1E10B8F0006D92E1 /* ScheduleList.storyboard in Resources */,
+				54AD6EC81E122775008FB5E2 /* ScheduleDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +529,7 @@
 				543106AB1E0A702B00FE6723 /* CalendarHeaderCell.m in Sources */,
 				543106B11E0B5E1A00FE6723 /* NSDate+Calendar.m in Sources */,
 				54B51ED61E10B788006D92E1 /* UIStoryboard+ViewController.m in Sources */,
+				54AD6ECC1E122843008FB5E2 /* DatabaseManager.m in Sources */,
 				543106631E0A442B00FE6723 /* main.m in Sources */,
 				543106C31E0BB41500FE6723 /* NSString+Localizable.m in Sources */,
 				54B51EE71E10D8B3006D92E1 /* ScheduleCell.m in Sources */,
@@ -527,6 +538,7 @@
 				543106A11E0A641900FE6723 /* CalendarViewDataSource.m in Sources */,
 				54B51EF61E10F682006D92E1 /* UIViewController+BackButton.m in Sources */,
 				54B51EE41E10BC82006D92E1 /* UINavigationController+Navigator.m in Sources */,
+				54AD6ECA1E1227EC008FB5E2 /* ScheduleDB.m in Sources */,
 				543106A81E0A689300FE6723 /* CalendarDateCell.m in Sources */,
 				54B51EE11E10BA0B006D92E1 /* ScheduleListViewController.m in Sources */,
 			);
@@ -580,6 +592,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		54AD6EC61E122775008FB5E2 /* ScheduleDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54AD6EC71E122775008FB5E2 /* Base */,
+			);
+			name = ScheduleDetail.storyboard;
+			sourceTree = "<group>";
+		};
 		54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -609,6 +629,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -657,6 +678,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

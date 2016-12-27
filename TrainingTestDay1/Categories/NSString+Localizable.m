@@ -19,6 +19,7 @@ NSString *const NSStringOk = @"ok";
 NSString *const NSStringRequiredEndTime = @"requiredEndTime";
 NSString *const NSStringRequiredTitle = @"requiredTitle";
 NSString *const NSStringRequiredTitleAndEndTime = @"requiredTitleAndEndTime";
+NSString *const NSStringFailedSaving = @"failedSaving";
 NSString *const NSStringSchedule = @"schedule";
 NSString *const NSStringScheduleListTitleFormat = @"scheduleListTitleFormat";
 NSString *const NSStringScheduleTimeFormat = @"scheduleTimeFormat";

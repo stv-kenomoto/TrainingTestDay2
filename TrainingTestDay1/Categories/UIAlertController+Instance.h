@@ -14,5 +14,6 @@
 + (UIAlertController *)alertControllerOfRequiredEndTime;
 + (UIAlertController *)alertControllerOfRequiredTitle;
 + (UIAlertController *)alertControllerOfRequiredTitleAndEndTime;
++ (UIAlertController *)alertControllerOfFailedSaving;
 
 @end

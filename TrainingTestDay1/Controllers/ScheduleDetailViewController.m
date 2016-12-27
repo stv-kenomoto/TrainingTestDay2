@@ -9,6 +9,7 @@
 #import "DatePickerTextField.h"
 #import "NSDate+Calendar.h"
 #import "NSString+Localizable.h"
+#import "ScheduleDB.h"
 #import "ScheduleDetailViewController.h"
 #import "UIAlertController+Instance.h"
 
@@ -33,7 +34,7 @@ static const NSInteger EndTimeMinuteInterval = 30;
     self.titleTextField.delegate = self;
     self.placeTextField.delegate = self;
     self.endTimeTextField.datePickerMode = UIDatePickerModeDateAndTime;
-    self.endTimeTextField.date = self.minimumSchedule.date;
+    self.endTimeTextField.date = [self.minimumSchedule.date dateByAddingTimeInterval:HalfOfHourTimeInterval];
     self.endTimeTextField.minuteInterval = EndTimeMinuteInterval;
     self.endTimeTextField.minimumDate = [self.minimumSchedule.date dateByAddingTimeInterval:HalfOfHourTimeInterval];
     self.endTimeTextField.maximumDate = self.maximumSchedule.date;
@@ -82,6 +83,19 @@ static const NSInteger EndTimeMinuteInterval = 30;
         UIAlertController *alertController = [UIAlertController alertControllerOfRequiredEndTime];
         [self presentViewController:alertController animated:YES completion:nil];
         return;
+    }
+
+    BOOL result = [ScheduleDB insertWithMinimumDate:self.minimumSchedule.date
+                          maximumDate:self.endTimeTextField.date
+                                title:self.titleTextField.text
+                                place:self.placeTextField.text
+                               detail:self.detailTextView.text];
+
+    if (result) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerOfFailedSaving];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
