@@ -14,9 +14,9 @@
 
 @implementation CalendarViewDataSource
 
-- (instancetype) initWithDate:(NSDate *)date {
+- (instancetype) initWithCalendars:(NSArray<Calendar *> *) calendars {
     if (self = [self init]) {
-        _date = date;
+        _calendars = calendars;
     }
 
     return self;
@@ -24,10 +24,10 @@
 
 - (CalendarHeaderCell *)calendarHeaderCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     CalendarHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CalendarHeaderCellIdentifier forIndexPath:indexPath];
-    NSDate *dateForCell = [self.date dateForCellAtIndexPath:indexPath];
+    Calendar *calendar = self.calendars[indexPath.row];
 
-    [cell setText:[dateForCell dateStringWithFormat:NSStringWeekFormat.localized]];
-    switch ([dateForCell weekdayType]) {
+    [cell setText:[calendar.date dateStringWithFormat:NSStringWeekFormat.localized]];
+    switch ([calendar.date weekdayType]) {
         case NSDateWeekdayTypeSunday:
             [cell setColor:[UIColor redColor]];
             break;
@@ -45,15 +45,15 @@
 
 - (CalendarDateCell *)calendarDateCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     CalendarDateCell *cell = (CalendarDateCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CalendarDateCellIdentifier forIndexPath:indexPath];
-    NSDate *dateForCell = [self.date dateForCellAtIndexPath:indexPath];
+    Calendar *calendar = self.calendars[indexPath.row];
 
-    [cell setText:[dateForCell dateStringWithFormat:NSStringDayFormat.localized]];
-    if (![self.date isEqualMonthWithDate:dateForCell]) {
+    [cell setText:[calendar.date dateStringWithFormat:NSStringDayFormat.localized]];
+    if (calendar.isDifferentMonth) {
         [cell setColor:[UIColor lightGrayColor]];
         return cell;
     }
 
-    switch ([dateForCell weekdayType]) {
+    switch ([calendar.date weekdayType]) {
         case NSDateWeekdayTypeSunday:
             [cell setColor:[UIColor redColor]];
             break;
@@ -79,9 +79,9 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     switch (section) {
         case CalendarViewDataSourceCellTypeHeader:
-            return NSCalendarDaysPerWeek;
+            return CalendarDaysPerWeek;
         default:
-            return [self.date numberOfDaysInMonth];
+            return self.calendars.count;
     }
 }
 

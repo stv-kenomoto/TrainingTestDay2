@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+#import "Calendar.h"
+
 typedef NS_ENUM(NSInteger, CalendarViewDataSourceCellType) {
     CalendarViewDataSourceCellTypeHeader,
     CalendarViewDataSourceCellTypeDate,
@@ -17,8 +19,8 @@ typedef NS_ENUM(NSInteger, CalendarViewDataSourceCellType) {
 
 @interface CalendarViewDataSource : NSObject <UICollectionViewDataSource>
 
-@property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSArray<Calendar *> *calendars;
 
-- (instancetype) initWithDate:(NSDate *)date;
+- (instancetype) initWithCalendars:(NSArray<Calendar *> *) calendars;
 
 @end

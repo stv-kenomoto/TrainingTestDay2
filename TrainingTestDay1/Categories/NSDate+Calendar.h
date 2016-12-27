@@ -20,21 +20,7 @@ typedef NS_ENUM(NSInteger, NSDateWeekdayType) {
 
 @interface NSDate (Calendar)
 
-UIKIT_EXTERN const NSInteger NSCalendarDaysPerWeek;
-
-- (NSRange)rangeOfWeeks;
-
-- (NSInteger)numberOfWeeks;
-
-- (NSInteger)numberOfDaysInMonth;
-
-- (NSDate *)firstDateOfMonth;
-
 - (NSDateWeekdayType)weekdayType;
-
-- (NSDate *)dateForCellAtIndexPath:(NSIndexPath *)indexPath;
-
-- (BOOL)isEqualMonthWithDate:(NSDate *)date;
 
 - (NSString *)dateStringWithFormat:(NSString *)format;
 

@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) CalendarViewDataSource *calendarViewDataSource;
+@property (strong, nonatomic) NSDate *date;
 
 @end
 
@@ -26,30 +27,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSDate *date = [NSDate date];
-    self.title = [date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.date = [NSDate date];
+    self.title = [self.date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
 
-    self.calendarViewDataSource = [[CalendarViewDataSource alloc] initWithDate:date];
+    self.calendarViewDataSource = [[CalendarViewDataSource alloc] initWithCalendars:[Calendar calendarWithDate:self.date]];
     self.collectionView.dataSource = self.calendarViewDataSource;
     self.collectionView.delegate = self;
 }
 
 - (IBAction)didTapPrev:(id)sender {
-    self.calendarViewDataSource.date = [self.calendarViewDataSource.date monthNextDate];
-    self.navigationItem.title = [self.calendarViewDataSource.date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.date = [self.date monthNextDate];
+    self.navigationItem.title = [self.date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.calendarViewDataSource.calendars = [Calendar calendarWithDate:self.date];
     [self.collectionView reloadData];
 }
 
 - (IBAction)didTapNext:(id)sender {
-    self.calendarViewDataSource.date = [self.calendarViewDataSource.date monthPrevDate];
-    self.navigationItem.title = [self.calendarViewDataSource.date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.date = [self.date monthPrevDate];
+    self.navigationItem.title = [self.date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.calendarViewDataSource.calendars = [Calendar calendarWithDate:self.date];
     [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat width = collectionView.frame.size.width / NSCalendarDaysPerWeek;
+    CGFloat width = collectionView.frame.size.width / CalendarDaysPerWeek;
     CGFloat height;
     switch (indexPath.section) {
         case CalendarViewDataSourceCellTypeHeader:
@@ -57,7 +60,6 @@
             break;
         default:
             height = CalendarDateCellHeight;
-            
             break;
     }
     return CGSizeMake(width, height);
@@ -78,8 +80,7 @@
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSDate *date = [self.calendarViewDataSource.date dateForCellAtIndexPath:indexPath];
-    [self.navigationController navigateToSchedueListWithDate:date];
+    [self.navigationController navigateToSchedueListWithDate:self.calendarViewDataSource.calendars[indexPath.row].date];
 }
 
 @end
