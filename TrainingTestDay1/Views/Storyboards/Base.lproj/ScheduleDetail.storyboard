@@ -155,7 +155,7 @@
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="O6i-Ef-pJS">
                                 <connections>
-                                    <action selector="removeButtonTouch:" destination="tc4-wa-75y" id="rwg-KI-rPS"/>
+                                    <action selector="deleteButtonTouch:" destination="tc4-wa-75y" id="yN1-h4-lab"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>

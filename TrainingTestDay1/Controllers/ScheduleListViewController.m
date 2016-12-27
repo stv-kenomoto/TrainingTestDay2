@@ -8,6 +8,7 @@
 
 #import "NSDate+Calendar.h"
 #import "NSString+Localizable.h"
+#import "ScheduleDB.h"
 #import "ScheduleListViewController.h"
 #import "ScheduleListViewDataSource.h"
 #import "UINavigationController+Navigator.h"
@@ -24,11 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = [self.date dateStringWithFormat:NSStringScheduleListTitleFormat.localized];
+    self.tableView.delegate = self;
+}
 
-    NSArray<Schedule *> *schedules = [Schedule schedulesWithDate:self.date];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSArray<Schedule *> *schedules = [ScheduleDB schedulesWithDate:self.date];
     self.scheduleListViewDataSource = [[ScheduleListViewDataSource alloc] initWithSchedules:schedules];
     self.tableView.dataSource = self.scheduleListViewDataSource;
-    self.tableView.delegate = self;
 }
 
 #pragma mark - UITableViewDelegate

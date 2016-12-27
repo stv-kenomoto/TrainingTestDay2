@@ -8,9 +8,15 @@
 
 @import Foundation;
 
+#import "Schedule.h"
+
 @interface ScheduleDB : NSObject
 
-+ (BOOL)insertWithMinimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate title:(NSString *)title place:(NSString *)place detail:(NSString *)detail;
++ (NSArray<Schedule *> *)schedulesWithDate:(NSDate *)date;
+
++ (BOOL)updateWithMinimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate title:(NSString *)title place:(NSString *)place detail:(NSString *)detail;
+
++ (BOOL)deleteWithDate:(NSDate *)date;
 
 + (void)create;
 

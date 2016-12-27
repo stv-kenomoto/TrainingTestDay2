@@ -33,7 +33,7 @@
                                                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9If-Ph-Zk3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="XXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9If-Ph-Zk3">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -43,6 +43,7 @@
                                                 <constraint firstItem="ifQ-Co-vhX" firstAttribute="leading" secondItem="hHy-ht-X9h" secondAttribute="leading" constant="11" id="4YA-Bf-4Y5"/>
                                                 <constraint firstItem="9If-Ph-Zk3" firstAttribute="leading" secondItem="ifQ-Co-vhX" secondAttribute="trailing" constant="44" id="AUc-ZX-JL1"/>
                                                 <constraint firstItem="9If-Ph-Zk3" firstAttribute="centerY" secondItem="hHy-ht-X9h" secondAttribute="centerY" id="N2L-TT-zkD"/>
+                                                <constraint firstAttribute="trailing" secondItem="9If-Ph-Zk3" secondAttribute="trailing" constant="11" id="To6-e8-yfW"/>
                                                 <constraint firstItem="ifQ-Co-vhX" firstAttribute="centerY" secondItem="hHy-ht-X9h" secondAttribute="centerY" id="WUh-fY-yB0"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -34,12 +34,20 @@ static const NSInteger EndTimeMinuteInterval = 30;
     self.titleTextField.delegate = self;
     self.placeTextField.delegate = self;
     self.endTimeTextField.datePickerMode = UIDatePickerModeDateAndTime;
-    self.endTimeTextField.date = [self.minimumSchedule.date dateByAddingTimeInterval:HalfOfHourTimeInterval];
+    self.endTimeTextField.date = [self.minimumSchedule.date dateByAddingTimeInterval:ScheduleHalfOfHourTimeInterval];
     self.endTimeTextField.minuteInterval = EndTimeMinuteInterval;
-    self.endTimeTextField.minimumDate = [self.minimumSchedule.date dateByAddingTimeInterval:HalfOfHourTimeInterval];
+    self.endTimeTextField.minimumDate = [self.minimumSchedule.date dateByAddingTimeInterval:ScheduleHalfOfHourTimeInterval];
     self.endTimeTextField.maximumDate = self.maximumSchedule.date;
     self.startTimeLabel.text = [self.minimumSchedule.date dateStringWithFormat:NSStringStartTimeFormat.localized];
     self.detailTextView.delegate = self;
+
+    self.titleTextField.text = self.minimumSchedule.title;
+    self.placeTextField.text = self.minimumSchedule.place;
+    self.detailTextView.text = self.minimumSchedule.detail;
+
+    if (self.detailTextView.text.length != 0) {
+        [self hideDetailPlaceHolderLabel];
+    }
 }
 
 - (void)hideKeyboardOfTitleTextField {
@@ -85,7 +93,7 @@ static const NSInteger EndTimeMinuteInterval = 30;
         return;
     }
 
-    BOOL result = [ScheduleDB insertWithMinimumDate:self.minimumSchedule.date
+    BOOL result = [ScheduleDB updateWithMinimumDate:self.minimumSchedule.date
                           maximumDate:self.endTimeTextField.date
                                 title:self.titleTextField.text
                                 place:self.placeTextField.text
@@ -99,9 +107,10 @@ static const NSInteger EndTimeMinuteInterval = 30;
     }
 }
 
-- (IBAction)removeButtonTouch:(id)sender {
+- (IBAction)deleteButtonTouch:(UIBarButtonItem *)sender {
     UIAlertController *alertController = [UIAlertController alertControllerOfDeleteScheduleWithHandler:^(UIAlertAction *action) {
-        NSLog(@"Remove");
+        [ScheduleDB deleteWithDate:self.minimumSchedule.date];
+        [self.navigationController popViewControllerAnimated:YES];
     }];
     [self presentViewController:alertController animated:YES completion:nil];
 }

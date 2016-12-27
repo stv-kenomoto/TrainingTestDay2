@@ -23,6 +23,12 @@ NSString *const ScheduleCellIdentifier = @"ScheduleCell";
 
 - (void)setupWithSchedule:(Schedule *)schedule {
     self.timeLabel.text = [schedule.date dateStringWithFormat:NSStringScheduleTimeFormat.localized];
+    self.scheduleLabel.text = schedule.title;
+    if (self.scheduleLabel.text.length == 0) {
+        self.backgroundColor = [UIColor clearColor];
+    } else {
+        self.backgroundColor = [UIColor colorWithRed:187/255.0 green:222/255.0 blue:251/255.0 alpha:1.0];
+    }
 }
 
 @end
