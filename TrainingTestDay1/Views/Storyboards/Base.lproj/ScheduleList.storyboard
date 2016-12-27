@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Schedule List View Controller-->
+        <scene sceneID="Hlp-WH-qfi">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleList" automaticallyAdjustsScrollViewInsets="NO" id="6fr-w0-KZ2" customClass="ScheduleListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kni-yq-nix"/>
+                        <viewControllerLayoutGuide type="bottom" id="xiR-ej-fR6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vm8-2C-cKI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hmo-ay-f1y">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduleCell" id="jpt-2L-9OZ" customClass="ScheduleCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jpt-2L-9OZ" id="hHy-ht-X9h">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00〜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-Co-vhX">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9If-Ph-Zk3">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ifQ-Co-vhX" firstAttribute="leading" secondItem="hHy-ht-X9h" secondAttribute="leading" constant="11" id="4YA-Bf-4Y5"/>
+                                                <constraint firstItem="9If-Ph-Zk3" firstAttribute="leading" secondItem="ifQ-Co-vhX" secondAttribute="trailing" constant="44" id="AUc-ZX-JL1"/>
+                                                <constraint firstItem="9If-Ph-Zk3" firstAttribute="centerY" secondItem="hHy-ht-X9h" secondAttribute="centerY" id="N2L-TT-zkD"/>
+                                                <constraint firstItem="ifQ-Co-vhX" firstAttribute="centerY" secondItem="hHy-ht-X9h" secondAttribute="centerY" id="WUh-fY-yB0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="scheduleLabel" destination="9If-Ph-Zk3" id="Js8-AJ-cyx"/>
+                                            <outlet property="timeLabel" destination="ifQ-Co-vhX" id="EuM-zM-aKt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hmo-ay-f1y" secondAttribute="trailing" id="773-4O-c1M"/>
+                            <constraint firstItem="xiR-ej-fR6" firstAttribute="top" secondItem="Hmo-ay-f1y" secondAttribute="bottom" id="bXN-KR-tLS"/>
+                            <constraint firstItem="Hmo-ay-f1y" firstAttribute="top" secondItem="kni-yq-nix" secondAttribute="bottom" id="bxi-ky-vvP"/>
+                            <constraint firstItem="Hmo-ay-f1y" firstAttribute="leading" secondItem="vm8-2C-cKI" secondAttribute="leading" id="yce-4t-T2f"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="Hmo-ay-f1y" id="AX5-9B-6a9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0LM-83-CfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="113"/>
+        </scene>
+    </scenes>
+</document>

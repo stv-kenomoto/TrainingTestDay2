@@ -19,11 +19,19 @@
 		543106A81E0A689300FE6723 /* CalendarDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106A71E0A689300FE6723 /* CalendarDateCell.m */; };
 		543106AB1E0A702B00FE6723 /* CalendarHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106AA1E0A702B00FE6723 /* CalendarHeaderCell.m */; };
 		543106B11E0B5E1A00FE6723 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106B01E0B5E1A00FE6723 /* NSDate+Calendar.m */; };
-		543106B31E0B7C1400FE6723 /* Week.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543106B21E0B7C1400FE6723 /* Week.plist */; };
-		543106BB1E0B9C6700FE6723 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106BA1E0B9C6700FE6723 /* Week.m */; };
-		543106BE1E0B9E3400FE6723 /* WeekPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106BD1E0B9E3400FE6723 /* WeekPlist.m */; };
 		543106C01E0BB36600FE6723 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543106BF1E0BB36600FE6723 /* Localizable.strings */; };
 		543106C31E0BB41500FE6723 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 543106C21E0BB41500FE6723 /* NSString+Localizable.m */; };
+		54AD6EB61E11F573008FB5E2 /* DatePickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */; };
+		54B51ED61E10B788006D92E1 /* UIStoryboard+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */; };
+		54B51EDB1E10B8F0006D92E1 /* ScheduleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */; };
+		54B51EE11E10BA0B006D92E1 /* ScheduleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE01E10BA0B006D92E1 /* ScheduleListViewController.m */; };
+		54B51EE41E10BC82006D92E1 /* UINavigationController+Navigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE31E10BC82006D92E1 /* UINavigationController+Navigator.m */; };
+		54B51EE71E10D8B3006D92E1 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE61E10D8B3006D92E1 /* ScheduleCell.m */; };
+		54B51EEA1E10DA8A006D92E1 /* ScheduleListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EE91E10DA8A006D92E1 /* ScheduleListViewDataSource.m */; };
+		54B51EEE1E10E709006D92E1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EED1E10E709006D92E1 /* Schedule.m */; };
+		54B51EF01E10F1E9006D92E1 /* ScheduleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B51EEF1E10F1E9006D92E1 /* ScheduleDetail.storyboard */; };
+		54B51EF31E10F256006D92E1 /* ScheduleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EF21E10F256006D92E1 /* ScheduleDetailViewController.m */; };
+		54B51EF61E10F682006D92E1 /* UIViewController+BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B51EF51E10F682006D92E1 /* UIViewController+BackButton.m */; };
 		E9ACB159E960EAD1A488113F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1FD7E0202DDF78F730F91D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,14 +77,29 @@
 		543106AA1E0A702B00FE6723 /* CalendarHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarHeaderCell.m; sourceTree = "<group>"; };
 		543106AF1E0B5E1A00FE6723 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
 		543106B01E0B5E1A00FE6723 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
-		543106B21E0B7C1400FE6723 /* Week.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Week.plist; sourceTree = "<group>"; };
-		543106B91E0B9C6700FE6723 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Week.h; sourceTree = "<group>"; };
-		543106BA1E0B9C6700FE6723 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week.m; sourceTree = "<group>"; };
-		543106BC1E0B9E3400FE6723 /* WeekPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekPlist.h; sourceTree = "<group>"; };
-		543106BD1E0B9E3400FE6723 /* WeekPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekPlist.m; sourceTree = "<group>"; };
 		543106BF1E0BB36600FE6723 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		543106C11E0BB41500FE6723 /* NSString+Localizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Localizable.h"; sourceTree = "<group>"; };
 		543106C21E0BB41500FE6723 /* NSString+Localizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localizable.m"; sourceTree = "<group>"; };
+		54AD6EB41E11F573008FB5E2 /* DatePickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerTextField.h; sourceTree = "<group>"; };
+		54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerTextField.m; sourceTree = "<group>"; };
+		54B51ED41E10B788006D92E1 /* UIStoryboard+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+ViewController.h"; sourceTree = "<group>"; };
+		54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+ViewController.m"; sourceTree = "<group>"; };
+		54B51EDA1E10B8F0006D92E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScheduleList.storyboard; sourceTree = "<group>"; };
+		54B51EDF1E10BA0B006D92E1 /* ScheduleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleListViewController.h; sourceTree = "<group>"; };
+		54B51EE01E10BA0B006D92E1 /* ScheduleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleListViewController.m; sourceTree = "<group>"; };
+		54B51EE21E10BC82006D92E1 /* UINavigationController+Navigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Navigator.h"; sourceTree = "<group>"; };
+		54B51EE31E10BC82006D92E1 /* UINavigationController+Navigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Navigator.m"; sourceTree = "<group>"; };
+		54B51EE51E10D8B3006D92E1 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCell.h; sourceTree = "<group>"; };
+		54B51EE61E10D8B3006D92E1 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCell.m; sourceTree = "<group>"; };
+		54B51EE81E10DA8A006D92E1 /* ScheduleListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleListViewDataSource.h; sourceTree = "<group>"; };
+		54B51EE91E10DA8A006D92E1 /* ScheduleListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleListViewDataSource.m; sourceTree = "<group>"; };
+		54B51EEC1E10E709006D92E1 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		54B51EED1E10E709006D92E1 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		54B51EEF1E10F1E9006D92E1 /* ScheduleDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleDetail.storyboard; sourceTree = "<group>"; };
+		54B51EF11E10F256006D92E1 /* ScheduleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDetailViewController.h; sourceTree = "<group>"; };
+		54B51EF21E10F256006D92E1 /* ScheduleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDetailViewController.m; sourceTree = "<group>"; };
+		54B51EF41E10F682006D92E1 /* UIViewController+BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButton.h"; sourceTree = "<group>"; };
+		54B51EF51E10F682006D92E1 /* UIViewController+BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButton.m"; sourceTree = "<group>"; };
 		96490F4AE0A2826D38A53414 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CD1FD7E0202DDF78F730F91D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0943DAE4D68C32AA9687E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +167,7 @@
 			children = (
 				543106AC1E0B5DAF00FE6723 /* Categories */,
 				543106941E0A449700FE6723 /* Controllers */,
-				543106B81E0B9C3E00FE6723 /* Models */,
+				54B51EEB1E10E6DB006D92E1 /* Models */,
 				543106961E0A44E100FE6723 /* Resources */,
 				543106951E0A44A900FE6723 /* Views */,
 			);
@@ -186,6 +209,10 @@
 				543106651E0A442B00FE6723 /* AppDelegate.m */,
 				543106671E0A442B00FE6723 /* CalendarViewController.h */,
 				543106681E0A442B00FE6723 /* CalendarViewController.m */,
+				54B51EF11E10F256006D92E1 /* ScheduleDetailViewController.h */,
+				54B51EF21E10F256006D92E1 /* ScheduleDetailViewController.m */,
+				54B51EDF1E10BA0B006D92E1 /* ScheduleListViewController.h */,
+				54B51EE01E10BA0B006D92E1 /* ScheduleListViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +222,7 @@
 			children = (
 				543106A51E0A683D00FE6723 /* Cells */,
 				543106A31E0A678400FE6723 /* Storyboards */,
+				54AD6EB31E11F53A008FB5E2 /* UI */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,7 +233,6 @@
 				543106611E0A442B00FE6723 /* Supporting Files */,
 				5431066D1E0A442B00FE6723 /* Assets.xcassets */,
 				543106721E0A442B00FE6723 /* Info.plist */,
-				543106B21E0B7C1400FE6723 /* Week.plist */,
 				543106BF1E0BB36600FE6723 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -214,8 +241,10 @@
 		543106A31E0A678400FE6723 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5431066F1E0A442B00FE6723 /* LaunchScreen.storyboard */,
 				5431066A1E0A442B00FE6723 /* Calendar.storyboard */,
+				5431066F1E0A442B00FE6723 /* LaunchScreen.storyboard */,
+				54B51EEF1E10F1E9006D92E1 /* ScheduleDetail.storyboard */,
+				54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -225,6 +254,8 @@
 			children = (
 				5431069F1E0A641900FE6723 /* CalendarViewDataSource.h */,
 				543106A01E0A641900FE6723 /* CalendarViewDataSource.m */,
+				54B51EE81E10DA8A006D92E1 /* ScheduleListViewDataSource.h */,
+				54B51EE91E10DA8A006D92E1 /* ScheduleListViewDataSource.m */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -236,6 +267,8 @@
 				543106AA1E0A702B00FE6723 /* CalendarHeaderCell.m */,
 				543106A61E0A689300FE6723 /* CalendarDateCell.h */,
 				543106A71E0A689300FE6723 /* CalendarDateCell.m */,
+				54B51EE51E10D8B3006D92E1 /* ScheduleCell.h */,
+				54B51EE61E10D8B3006D92E1 /* ScheduleCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -247,17 +280,30 @@
 				543106B01E0B5E1A00FE6723 /* NSDate+Calendar.m */,
 				543106C11E0BB41500FE6723 /* NSString+Localizable.h */,
 				543106C21E0BB41500FE6723 /* NSString+Localizable.m */,
+				54B51EE21E10BC82006D92E1 /* UINavigationController+Navigator.h */,
+				54B51EE31E10BC82006D92E1 /* UINavigationController+Navigator.m */,
+				54B51ED41E10B788006D92E1 /* UIStoryboard+ViewController.h */,
+				54B51ED51E10B788006D92E1 /* UIStoryboard+ViewController.m */,
+				54B51EF41E10F682006D92E1 /* UIViewController+BackButton.h */,
+				54B51EF51E10F682006D92E1 /* UIViewController+BackButton.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		543106B81E0B9C3E00FE6723 /* Models */ = {
+		54AD6EB31E11F53A008FB5E2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				543106B91E0B9C6700FE6723 /* Week.h */,
-				543106BA1E0B9C6700FE6723 /* Week.m */,
-				543106BC1E0B9E3400FE6723 /* WeekPlist.h */,
-				543106BD1E0B9E3400FE6723 /* WeekPlist.m */,
+				54AD6EB41E11F573008FB5E2 /* DatePickerTextField.h */,
+				54AD6EB51E11F573008FB5E2 /* DatePickerTextField.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		54B51EEB1E10E6DB006D92E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54B51EEC1E10E709006D92E1 /* Schedule.h */,
+				54B51EED1E10E709006D92E1 /* Schedule.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,10 +429,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				543106C01E0BB36600FE6723 /* Localizable.strings in Resources */,
-				543106B31E0B7C1400FE6723 /* Week.plist in Resources */,
 				543106711E0A442B00FE6723 /* LaunchScreen.storyboard in Resources */,
+				54B51EF01E10F1E9006D92E1 /* ScheduleDetail.storyboard in Resources */,
 				5431066E1E0A442B00FE6723 /* Assets.xcassets in Resources */,
 				5431066C1E0A442B00FE6723 /* Calendar.storyboard in Resources */,
+				54B51EDB1E10B8F0006D92E1 /* ScheduleList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,14 +508,21 @@
 			files = (
 				543106691E0A442B00FE6723 /* CalendarViewController.m in Sources */,
 				543106661E0A442B00FE6723 /* AppDelegate.m in Sources */,
-				543106BE1E0B9E3400FE6723 /* WeekPlist.m in Sources */,
+				54AD6EB61E11F573008FB5E2 /* DatePickerTextField.m in Sources */,
+				54B51EEE1E10E709006D92E1 /* Schedule.m in Sources */,
 				543106AB1E0A702B00FE6723 /* CalendarHeaderCell.m in Sources */,
 				543106B11E0B5E1A00FE6723 /* NSDate+Calendar.m in Sources */,
+				54B51ED61E10B788006D92E1 /* UIStoryboard+ViewController.m in Sources */,
 				543106631E0A442B00FE6723 /* main.m in Sources */,
 				543106C31E0BB41500FE6723 /* NSString+Localizable.m in Sources */,
+				54B51EE71E10D8B3006D92E1 /* ScheduleCell.m in Sources */,
+				54B51EF31E10F256006D92E1 /* ScheduleDetailViewController.m in Sources */,
+				54B51EEA1E10DA8A006D92E1 /* ScheduleListViewDataSource.m in Sources */,
 				543106A11E0A641900FE6723 /* CalendarViewDataSource.m in Sources */,
-				543106BB1E0B9C6700FE6723 /* Week.m in Sources */,
+				54B51EF61E10F682006D92E1 /* UIViewController+BackButton.m in Sources */,
+				54B51EE41E10BC82006D92E1 /* UINavigationController+Navigator.m in Sources */,
 				543106A81E0A689300FE6723 /* CalendarDateCell.m in Sources */,
+				54B51EE11E10BA0B006D92E1 /* ScheduleListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +572,14 @@
 				543106701E0A442B00FE6723 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		54B51ED91E10B8F0006D92E1 /* ScheduleList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54B51EDA1E10B8F0006D92E1 /* Base */,
+			);
+			name = ScheduleList.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

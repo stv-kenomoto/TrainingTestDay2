@@ -19,9 +19,12 @@ const CGFloat CalendarHeaderCellHeight = 33;
 
 @implementation CalendarHeaderCell
 
-- (void)setupWithWeek:(Week *)week {
-    self.label.text = week.name;
-    self.label.textColor = week.color;
+- (void)setText:(NSString *)text {
+    self.label.text = text;
+}
+
+- (void)setColor:(UIColor *)color {
+    self.label.textColor = color;
 }
 
 @end

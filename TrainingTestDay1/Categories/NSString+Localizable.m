@@ -8,7 +8,16 @@
 
 #import "NSString+Localizable.h"
 
+NSString *const NSStringBack = @"back";
 NSString *const NSStringCalendarTitleFormat = @"calendarTitleFormat";
+NSString *const NSStringDayFormat = @"dayFormat";
+NSString *const NSStringDone = @"done";
+NSString *const NSStringEndTimeFormat = @"endTimeFormat";
+NSString *const NSStringSchedule = @"schedule";
+NSString *const NSStringScheduleListTitleFormat = @"scheduleListTitleFormat";
+NSString *const NSStringScheduleTimeFormat = @"scheduleTimeFormat";
+NSString *const NSStringStartTimeFormat = @"startTimeFormat";
+NSString *const NSStringWeekFormat = @"weekFormat";
 
 @implementation NSString (Localizable)
 

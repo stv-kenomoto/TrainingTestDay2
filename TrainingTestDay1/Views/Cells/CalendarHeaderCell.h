@@ -8,13 +8,13 @@
 
 @import UIKit;
 
-#import "Week.h"
-
 @interface CalendarHeaderCell : UICollectionViewCell
 
 UIKIT_EXTERN NSString *const CalendarHeaderCellIdentifier;
 UIKIT_EXTERN const CGFloat CalendarHeaderCellHeight;
 
-- (void)setupWithWeek:(Week *)week;
+- (void)setText:(NSString *)text;
+
+- (void)setColor:(UIColor *)color;
 
 @end

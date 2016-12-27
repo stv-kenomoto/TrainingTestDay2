@@ -34,11 +34,7 @@ UIKIT_EXTERN const NSInteger NSCalendarDaysPerWeek;
 
 - (NSDate *)dateForCellAtIndexPath:(NSIndexPath *)indexPath;
 
-- (NSString *)dayStringForCellAtIndexPath:(NSIndexPath *)indexPath;
-
-- (NSDateWeekdayType)weekdayTypeForCellAtIndexPath:(NSIndexPath *)indexPath;
-
-- (BOOL)isEqualToDateForCellAtIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)isEqualMonthWithDate:(NSDate *)date;
 
 - (NSString *)dateStringWithFormat:(NSString *)format;
 

@@ -6,4 +6,22 @@
   Copyright © 2016年 enomt. All rights reserved.
 */
 
+"back" = "戻る";
+
 "calendarTitleFormat" = "yyyy年MM月";
+
+"dayFormat" = "d";
+
+"done" = "完了";
+
+"endTimeFormat" = "〜yyyy/MM/dd HH:mm";
+
+"scheduleListTitleFormat" = "yyyy年MM月dd日 E曜日";
+
+"schedule" = "予定";
+
+"scheduleTimeFormat" = "HH:mm〜";
+
+"startTimeFormat" = "yyyy/MM/dd HH:mm〜";
+
+"weekFormat" = "E";

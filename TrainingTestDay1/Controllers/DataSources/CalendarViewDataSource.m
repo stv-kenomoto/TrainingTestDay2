@@ -10,24 +10,9 @@
 #import "CalendarDateCell.h"
 #import "CalendarHeaderCell.h"
 #import "NSDate+Calendar.h"
-#import "WeekPlist.h"
-
-@interface CalendarViewDataSource ()
-
-@property (strong, nonatomic) NSArray<Week *> *weeks;
-
-@end
+#import "NSString+Localizable.h"
 
 @implementation CalendarViewDataSource
-
-- (instancetype) init {
-    if (self = [super init]) {
-        _date = [NSDate date];
-        _weeks = [WeekPlist weeks];
-    }
-
-    return self;
-}
 
 - (instancetype) initWithDate:(NSDate *)date {
     if (self = [self init]) {
@@ -39,28 +24,44 @@
 
 - (CalendarHeaderCell *)calendarHeaderCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     CalendarHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CalendarHeaderCellIdentifier forIndexPath:indexPath];
-    [cell setupWithWeek:self.weeks[indexPath.row]];
+    NSDate *dateForCell = [self.date dateForCellAtIndexPath:indexPath];
+
+    [cell setText:[dateForCell dateStringWithFormat:NSStringWeekFormat.localized]];
+    switch ([dateForCell weekdayType]) {
+        case NSDateWeekdayTypeSunday:
+            [cell setColor:[UIColor redColor]];
+            break;
+
+        case NSDateWeekdayTypeSaturday:
+            [cell setColor:[UIColor blueColor]];
+            break;
+
+        default:
+            [cell setColor:[UIColor blackColor]];
+    }
+
     return cell;
 }
 
 - (CalendarDateCell *)calendarDateCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     CalendarDateCell *cell = (CalendarDateCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CalendarDateCellIdentifier forIndexPath:indexPath];
-    [cell setText:[self.date dayStringForCellAtIndexPath:indexPath]];
+    NSDate *dateForCell = [self.date dateForCellAtIndexPath:indexPath];
 
-    if (![self.date isEqualToDateForCellAtIndexPath:indexPath]) {
+    [cell setText:[dateForCell dateStringWithFormat:NSStringDayFormat.localized]];
+    if (![self.date isEqualMonthWithDate:dateForCell]) {
         [cell setColor:[UIColor lightGrayColor]];
         return cell;
     }
 
-    switch ([self.date weekdayTypeForCellAtIndexPath:indexPath]) {
+    switch ([dateForCell weekdayType]) {
         case NSDateWeekdayTypeSunday:
             [cell setColor:[UIColor redColor]];
             break;
-            
+
         case NSDateWeekdayTypeSaturday:
             [cell setColor:[UIColor blueColor]];
             break;
-            
+
         default:
             [cell setColor:[UIColor blackColor]];
             break;
@@ -78,7 +79,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     switch (section) {
         case CalendarViewDataSourceCellTypeHeader:
-            return self.weeks.count;
+            return NSCalendarDaysPerWeek;
         default:
             return [self.date numberOfDaysInMonth];
     }

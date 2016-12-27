@@ -12,6 +12,7 @@
 #import "CalendarViewDataSource.h"
 #import "NSDate+Calendar.h"
 #import "NSString+Localizable.h"
+#import "UINavigationController+Navigator.h"
 
 @interface CalendarViewController () <UICollectionViewDelegateFlowLayout>
 
@@ -26,7 +27,8 @@
     [super viewDidLoad];
 
     NSDate *date = [NSDate date];
-    self.navigationItem.title = [date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.title = [date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+
     self.calendarViewDataSource = [[CalendarViewDataSource alloc] initWithDate:date];
     self.collectionView.dataSource = self.calendarViewDataSource;
     self.collectionView.delegate = self;
@@ -71,6 +73,13 @@
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSDate *date = [self.calendarViewDataSource.date dateForCellAtIndexPath:indexPath];
+    [self.navigationController navigateToSchedueListWithDate:date];
 }
 
 @end
