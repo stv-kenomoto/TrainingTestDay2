@@ -9,8 +9,6 @@
 #import "CalendarViewDataSource.h"
 #import "CalendarDateCell.h"
 #import "CalendarHeaderCell.h"
-#import "NSDate+Calendar.h"
-#import "NSString+Localizable.h"
 
 @implementation CalendarViewDataSource
 
@@ -25,48 +23,14 @@
 - (CalendarHeaderCell *)calendarHeaderCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     CalendarHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CalendarHeaderCellIdentifier forIndexPath:indexPath];
     Calendar *calendar = self.calendars[indexPath.row];
-
-    [cell setText:[calendar.date dateStringWithFormat:NSStringWeekFormat.localized]];
-    switch ([calendar.date weekdayType]) {
-        case NSDateWeekdayTypeSunday:
-            [cell setColor:[UIColor redColor]];
-            break;
-
-        case NSDateWeekdayTypeSaturday:
-            [cell setColor:[UIColor blueColor]];
-            break;
-
-        default:
-            [cell setColor:[UIColor blackColor]];
-    }
-
+    [cell setupWithCalendar:calendar];
     return cell;
 }
 
 - (CalendarDateCell *)calendarDateCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     CalendarDateCell *cell = (CalendarDateCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CalendarDateCellIdentifier forIndexPath:indexPath];
     Calendar *calendar = self.calendars[indexPath.row];
-
-    [cell setText:[calendar.date dateStringWithFormat:NSStringDayFormat.localized]];
-    if (calendar.isDifferentMonth) {
-        [cell setColor:[UIColor lightGrayColor]];
-        return cell;
-    }
-
-    switch ([calendar.date weekdayType]) {
-        case NSDateWeekdayTypeSunday:
-            [cell setColor:[UIColor redColor]];
-            break;
-
-        case NSDateWeekdayTypeSaturday:
-            [cell setColor:[UIColor blueColor]];
-            break;
-
-        default:
-            [cell setColor:[UIColor blackColor]];
-            break;
-    }
-
+    [cell setupWithCalendar:calendar];
     return cell;
 }
 

@@ -14,9 +14,10 @@ UIKIT_EXTERN const NSInteger CalendarDaysPerWeek;
 
 @property (strong, nonatomic) NSDate *date;
 @property (assign, nonatomic) BOOL isDifferentMonth;
+@property (assign, nonatomic) BOOL isSchedule;
 
 + (NSArray<Calendar *> *)calendarWithDate:(NSDate *)date;
 
-- (instancetype)initWithDate:(NSDate *)date isDifferentMonth:(BOOL)isDifferentMonth;
+- (instancetype)initWithDate:(NSDate *)date isDifferentMonth:(BOOL)isDifferentMonth isSchedule:(BOOL)isSchedule;
 
 @end

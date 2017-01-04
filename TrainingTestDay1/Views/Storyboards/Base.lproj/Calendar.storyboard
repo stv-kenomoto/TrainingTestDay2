@@ -80,14 +80,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4d-bA-eZ3">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="b4d-bA-eZ3" firstAttribute="top" secondItem="vB0-7V-Qcg" secondAttribute="bottom" constant="7" id="0Q4-6o-Vw0"/>
                                             <constraint firstItem="vB0-7V-Qcg" firstAttribute="top" secondItem="ntL-b8-ixF" secondAttribute="top" constant="11" id="FQg-w0-8ho"/>
+                                            <constraint firstItem="b4d-bA-eZ3" firstAttribute="leading" secondItem="vB0-7V-Qcg" secondAttribute="leading" id="NQ2-fX-agl"/>
                                             <constraint firstItem="vB0-7V-Qcg" firstAttribute="leading" secondItem="ntL-b8-ixF" secondAttribute="leading" constant="11" id="iqi-aa-j6E"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="label" destination="vB0-7V-Qcg" id="TQR-gL-vLn"/>
+                                            <outlet property="scheduleMarkLabel" destination="b4d-bA-eZ3" id="rQ4-Wu-16E"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

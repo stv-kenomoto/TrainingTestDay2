@@ -8,6 +8,7 @@
 
 #import "Calendar.h"
 #import "NSDate+Calendar.h"
+#import "ScheduleDB.h"
 
 const NSInteger CalendarDaysPerWeek = 7;
 
@@ -38,16 +39,17 @@ const NSInteger CalendarDaysPerWeek = 7;
 
         NSInteger month = [[[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:date] month];
         NSInteger monthOfNexDate =[[[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:nextDate] month];
-        [calendars addObject:[[Calendar alloc] initWithDate:nextDate isDifferentMonth:month != monthOfNexDate]];
+        [calendars addObject:[[Calendar alloc] initWithDate:nextDate isDifferentMonth:month != monthOfNexDate isSchedule:[ScheduleDB isScheduleWithDate:nextDate]]];
     }
 
     return calendars;
 }
 
-- (instancetype)initWithDate:(NSDate *)date isDifferentMonth:(BOOL)isDifferentMonth {
+- (instancetype)initWithDate:(NSDate *)date isDifferentMonth:(BOOL)isDifferentMonth isSchedule:(BOOL)isSchedule {
     if (self = [super init]) {
         _date = date;
         _isDifferentMonth = isDifferentMonth;
+        _isSchedule = isSchedule;
     }
 
     return self;

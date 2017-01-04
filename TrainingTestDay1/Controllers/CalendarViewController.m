@@ -26,13 +26,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.date = [NSDate date];
     self.title = [self.date dateStringWithFormat:NSStringCalendarTitleFormat.localized];
+    self.collectionView.delegate = self;
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.calendarViewDataSource = [[CalendarViewDataSource alloc] initWithCalendars:[Calendar calendarWithDate:self.date]];
     self.collectionView.dataSource = self.calendarViewDataSource;
-    self.collectionView.delegate = self;
 }
 
 - (IBAction)didTapPrev:(id)sender {

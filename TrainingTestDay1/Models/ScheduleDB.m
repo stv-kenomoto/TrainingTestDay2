@@ -7,6 +7,7 @@
 //
 
 #import "DatabaseManager.h"
+#import "NSDate+Calendar.h"
 #import "ScheduleDB.h"
 
 static NSString *const TableName = @"schedule";
@@ -73,6 +74,7 @@ static const NSInteger ScheduleCount = 48;
         }
     }
 
+    [db close];
     return schedules;
 }
 
@@ -139,6 +141,22 @@ static const NSInteger ScheduleCount = 48;
 
     [db close];
     return isSucceeded;
+}
+
++ (BOOL)isScheduleWithDate:(NSDate *)date {
+    NSString *sql = [NSString stringWithFormat:@"SELECT %@ FROM %@ WHERE  %@ >= ? AND %@ < ?;",
+                     KeyNameDate,
+                     TableName,
+                     KeyNameDate,
+                     KeyNameDate];
+
+    FMDatabase *db = [DatabaseManager database];
+    [db open];
+    FMResultSet *result = [db executeQuery:sql, date, [date dateByAddingTimeInterval:60 * 60 * 24]];
+    [result next];
+    BOOL isSchedule = 0 < result.columnCount;
+    [db close];
+    return isSchedule;
 }
 
 + (void)create {

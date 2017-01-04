@@ -8,13 +8,13 @@
 
 @import UIKit;
 
+#import "Calendar.h"
+
 @interface CalendarDateCell : UICollectionViewCell
 
 UIKIT_EXTERN NSString *const CalendarDateCellIdentifier;
 UIKIT_EXTERN const CGFloat CalendarDateCellHeight;
 
-- (void)setText:(NSString *)text;
-
-- (void)setColor:(UIColor *)color;
+- (void)setupWithCalendar:(Calendar *)calendar;
 
 @end

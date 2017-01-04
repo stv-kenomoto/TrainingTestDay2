@@ -18,6 +18,8 @@
 
 + (BOOL)deleteWithDate:(NSDate *)date;
 
++ (BOOL)isScheduleWithDate:(NSDate *)date;
+
 + (void)create;
 
 @end
